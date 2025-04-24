@@ -1,0 +1,18 @@
+FROM python:3.10-slim
+
+WORKDIR /app
+
+# Copy requirements and install dependencies
+COPY requirements.txt .
+RUN pip install --no-cache-dir --upgrade pip && \
+    pip install --default-timeout=100 -r requirements.txt
+
+# Copy full source
+COPY . /app
+
+# Verify that everything's in place
+RUN echo "Verifying contents of /app:" && ls -la /app
+RUN if [ ! -f "/app/server.py" ]; then echo "server.py NOT found!" && exit 1; fi
+
+# Set default startup command
+CMD ["bash", "/app/entrypoint.sh"]

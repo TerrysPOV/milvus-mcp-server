@@ -1,0 +1,5 @@
+#requirements.txt
+python-dotenv
+pymilvus==2.2.12
+fastmcp @ git+https://github.com/jlowin/fastmcp.git
+marshmallow==3.20.1

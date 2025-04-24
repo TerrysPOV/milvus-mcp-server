@@ -1,0 +1,12 @@
+Uninstalled 15 packages in 194ms
+Installed 15 packages in 68ms
+Traceback (most recent call last):
+  File "/Users/terrenceyodaiken/claude-workspace/ghl-mcp/mcp-server-milvus/milvus-standalone/server.py", line 1, in <module>
+    from fastmcp import FastMCP
+  File "/Users/terrenceyodaiken/.pyenv/versions/3.12.2/envs/powerpoint-env/lib/python3.12/site-packages/fastmcp/__init__.py", line 8, in <module>
+    from fastmcp.client import Client
+  File "/Users/terrenceyodaiken/.pyenv/versions/3.12.2/envs/powerpoint-env/lib/python3.12/site-packages/fastmcp/client/__init__.py", line 1, in <module>
+    from .client import Client
+  File "/Users/terrenceyodaiken/.pyenv/versions/3.12.2/envs/powerpoint-env/lib/python3.12/site-packages/fastmcp/client/client.py", line 8, in <module>
+    from mcp.client.session import (
+ImportError: cannot import name 'LoggingFnT' from 'mcp.client.session' (/Users/terrenceyodaiken/.pyenv/versions/3.12.2/envs/powerpoint-env/lib/python3.12/site-packages/mcp/client/session.py)

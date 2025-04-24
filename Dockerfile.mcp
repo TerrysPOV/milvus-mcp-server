@@ -1,0 +1,18 @@
+FROM python:3.10-slim
+
+WORKDIR /app
+
+COPY requirements.txt .
+RUN apt-get update && \
+    apt-get install -y git && \
+    pip install --no-cache-dir --upgrade pip && \
+    pip install --default-timeout=100 -r requirements.txt
+
+COPY . /app
+
+RUN echo "Verifying contents of /app:" && ls -la /app
+RUN if [ ! -f "/app/server.py" ]; then echo "server.py NOT found!" && exit 1; fi
+
+CMD ["bash", "/app/entrypoint.sh"]
+
+
