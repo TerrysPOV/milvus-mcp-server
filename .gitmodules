@@ -1,0 +1,12 @@
+[submodule "fastmcp"]
+	path = fastmcp
+	url = https://github.com/jlowin/fastmcp.git
+[submodule "milvus"]
+	path = milvus
+	url = https://github.com/zilliztech/milvus.git
+[submodule "mcp-server-milvus"]
+	path = mcp-server-milvus
+	url = https://github.com/TerrysPOV/mcp-server-milvus.git
+[submodule "milvus_mcp_attempts/fastmcp"]
+	path = milvus_mcp_attempts/fastmcp
+	url = https://github.com/jlowin/fastmcp.git
